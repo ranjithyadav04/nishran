@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For the One Who Holds My Heart 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #ffe4e1, #e0ffff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.9s; }
+    section:nth-of-type(5) { animation-delay: 1.2s; }
+    section:nth-of-type(6) { animation-delay: 1.5s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1, h2 {
+      color: #d63384;
+    }
+    .gallery img {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    ul.love-reasons {
+      list-style-type: heart;
+      font-size: 1.2em;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .love-reasons li::marker {
+      content: '❤️ ';
+    }
+    .surprise-btn {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .surprise-btn:hover {
+      background: #ff85c1;
+    }
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      font-style: italic;
+      color: #ff1493;
+    }
+    form input, form button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1em;
+    }
+   #musicControl {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<div id="musicControl">
+  <button onclick="toggleMusic()">Play Music 🎵</button>
+</div>
+<audio id="bgMusic" loop>
+  <source src="manasa.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Home Page -->
+<section id="home">
+  <h1>For My Beautiful Girl 💖</h1>
+  <p>Hello <strong>Nishuuu</strong>,</p>
+  <p>I built this little site to say something important...</p>
+  <p style="font-size: 2em; color: red; animation: pulse 2s infinite;">I’m Sorry 😔 & I Like You Frnduu❤️</p>
+</section>
+
+<!-- Our Memories -->
+<section id="memories">
+  <h2>Our Memories</h2>
+  <div class="gallery">
+    <img src="firstdate.jpg" alt="First Date">
+    <h3>First date 🫂</h3>
+    <img src="fav.jpg" alt="Your Smile">
+    <h3>fav pic 🤌🏻🤌🏻</h3>
+    <img src="smile.jpg" alt="Best Day Ever">
+    <h3>Smile 🫠🥹 </h3>
+  </div>
+</section>
+
+<!-- My Apology -->
+<section id="apology">
+  <h2>My Apology</h2>
+  <p>I know I made a mistake. I hurt you, and I’m truly sorry. You mean the world to me, and I promise to become better — for you, for us. I miss your smile, your voice, your love.</p>
+</section>
+
+<!-- Why You're Special -->
+<section id="special">
+  <h2>Why You're Special</h2>
+  <ul class="love-reasons">
+    <li>Your smile brighten my darkest days.🥹🥹</li>
+    <li>Your kindness is unmatched.🫂🫂</li>
+    <li>Your laughter is music to my heart.🎶🎵🎼🎼🎼🎶🎵🎼</li>
+    <li>You're my best friend and sweetest friend 💞💞💞</li>
+    <li>Life is beautiful with you .😍😍😍</li>
+  </ul>
+</section>
+
+<!-- Surprise Button -->
+<section id="surprise">
+  <h2>A Surprise for You 💌</h2>
+  <button class="surprise-btn" onclick="showLoveNote()">Click for a Surprise</button>
+  <p class="hidden-message" id="loveNote">Every heartbeat of mine whispers nishuu nishuuu 🤌🏻🤌🏻. You're the reason I believe friendship.🥹🥹 💕</p>
+</section>
+
+<!-- Final Contact Message -->
+
+
+<script>
+  function showLoveNote() {
+    document.getElementById('loveNote').style.display = 'block';
+  }
+
+  function toggleMusic() {
+    const music = document.getElementById('bgMusic');
+    const btn = document.querySelector('#musicControl button');
+    if (music.paused) {
+      music.play();
+      btn.textContent = 'Pause Music ⏸';
+    } else {
+      music.pause();
+      btn.textContent = 'Play Music 🎵';
+    }
+  }
+</script>
+
+</body>
+</html>
